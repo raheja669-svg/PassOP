@@ -131,7 +131,8 @@ return (
                     <div className="flex gap-3">
                         <input value={form.username} onChange={handleChange} placeholder="Enter Username" className="border-purple-300 py-1 p-4 gap-2 w-full rounded-2xl bg-white text-black border-2" type="text" name="username" id="" />
                         <div className="relative flex">
-                            <input ref={passwordref} type="password" value={form.password} onChange={handleChange} placeholder="Enter Password" className="border-purple-300 py-1 p-4 gap-2 w-full rounded-2xl bg-white text-black border-2" name="password" id="" />
+                           
+                            <input ref={passwordref} type="password" value={form.password} onChange={handleChange}autoComplete="new-password" placeholder="Enter Password" className="border-purple-300 py-1 p-4 gap-2 w-full rounded-2xl apperarance-none bg-white text-black border-2" name="password" id="" />
                             <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer flex" onClick={showPassword}>
                                 <img src={eyecross} ref={ref} alt="" width="16" height="16" />
                             </span>
