@@ -20,7 +20,7 @@ const Manager = () => {
     })
 
     const getpasswords = async () => {
-        let req = await fetch("http://localhost:3000/")
+        let req = await fetch("https://passop-1m9a.onrender.com/")
         let passwords = await req.json()
         setpasswordArray(passwords)
         console.log(passwords)
@@ -58,12 +58,12 @@ const copyText = (text) => {
 const savePassword = async (params) => {
     if (form.site.length >= 3 && form.username.length >= 3 && form.password.length >= 3) {
 
-         await fetch("http://localhost:3000/", {
+         await fetch("https://passop-1m9a.onrender.com/", {
             method: "DELETE", headers: {  "Content-Type": "application/json"},
             body: JSON.stringify({ id: form.id })
         })
     
-          await fetch("http://localhost:3000/", {
+          await fetch("https://passop-1m9a.onrender.com/", {
             method: "POST", headers: {  "Content-Type": "application/json"},
             body: JSON.stringify({ ...form, id })
         })
@@ -81,7 +81,7 @@ const DeletePassword = async (id) => {
     let c = confirm("Are you sure you want to delete this password?")
     if (c) {
       setpasswordArray(passwordArray.filter((item) => item.id !== id))    
-        let res = await fetch(`http://localhost:3000/`, {
+        let res = await fetch(`https://passop-1m9a.onrender.com`, {
             method: "DELETE", headers: {  "Content-Type": "application/json"},
             body: JSON.stringify({ id })
         })
