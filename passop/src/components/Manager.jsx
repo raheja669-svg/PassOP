@@ -162,7 +162,7 @@ return (
                         <tbody className="bg-purple-300">
                             {passwordArray.map((item, index) => {
                                 return <tr key={index}>
-                                    <td className="border border-white py-2 text-center w-32">{item.site}<a href={item.site} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit</a>
+                                    <td className="border border-white py-2 text-center w-32">{item.site}<a href={item.site.startsWith('http') ? item.site : `https://${item.site}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Visit</a>
                                         <button className="ml-7 cursor-pointer" onClick={() => { copyText(item.site) }}>
                                             <img src={copy} alt="Copy" />
                                         </button>

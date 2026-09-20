@@ -1,4 +1,5 @@
 import React from 'react'
+import github from './github.svg'
 
 const Navbar = () => {
   return (
