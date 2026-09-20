@@ -3,7 +3,7 @@ import './App.css'
 import "tailwindcss";
 import Navbar from './components/Navbar'
 import Manager from './components/Manager'
-import Footer from './components/footer.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
